@@ -14,7 +14,7 @@ function Navbar() {
     <>
       <NavContainer>
         <h2>
-          Navbar <span>responsive</span>
+          <img src="public/cover.png" alt="" />
         </h2>
         <div className={`links ${clicked ? "active" : ""}`}>
         <a onClick = {handleClick} href="#h">Inicio</a>
@@ -44,16 +44,20 @@ function Navbar() {
 export default Navbar;
 
 const NavContainer = styled.nav`
-  h2 {
-    font-size: 2rem;
+  img {
     color: #e8e8e8;
-    font-weight: 300;
-    span {
-      font-weight: bold;
-    }
+    margin-left:0.3rem;
+    margin-top:0.5rem;
+    border-radius:10px;
+    background-color:#cdcdcd7d;
+    height: 90px; /* Cambia el ancho */
+    
+  
   }
-  padding: 2rem;
-  background-color: #333;
+  
+  background: rgb(28, 31, 76);
+  background: rgb(212,19,90);
+background: linear-gradient(90deg, rgba(212,19,90,1) 0%, rgba(28,31,76,1) 69%);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -70,11 +74,19 @@ const NavContainer = styled.nav`
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+
     a {
       color: #e5e5e5/0;
       font-size: 0rem;
       display: block;
+      &:hover {
+        background-color: #ffffff11;
+        transition: 200ms;
+        padding: 0.2rem;
+        border-radius: 7px;
+      }
     }
+
     @media (min-width: 768px) {
       position: initial;
       margin: 0;
@@ -126,7 +138,8 @@ const BgDiv = styled.div`
   z-index: -1;
   &.active {
     border-radius: 0 0 80% 0;
-    background-color: #222;
+    background: rgb(212,19,90);
+background: linear-gradient(90deg, rgba(212,19,90,1) 0%, rgba(28,31,76,1) 69%);
     transition: 300ms;
     width: 100%;
     height: 100%;
