@@ -56,7 +56,7 @@ function Navbar() {
 export default Navbar;
 
 const NavContainer = styled.nav`
-  height:4.5rem;
+  height: 4rem;
   background: rgb(28, 31, 76);
   background: rgb(212, 19, 90);
   background: linear-gradient(
@@ -73,7 +73,8 @@ const NavContainer = styled.nav`
     margin-right: 1rem;
     font-size: larger;
   }
-  .links {
+  .links 
+  {
     position: absolute;
     top: -70px;
     left: -2000px;
@@ -84,12 +85,12 @@ const NavContainer = styled.nav`
     a {
       color: #e5e5e5/0;
       display: block;
-      transition:1000ms;
+      transition: 1000ms;
       &:hover {
         background-color: #ffffff11;
         transition: 500ms;
-        padding-left:10px;
-        padding-right:10px;
+        padding-left: 10px;
+        padding-right: 10px;
         border-radius: 7px;
       }
     }
@@ -111,14 +112,15 @@ const NavContainer = styled.nav`
     position: absolute;
     margin-left: auto;
     margin-right: auto;
-    top: 25%;
+    top: 10%;
     left: 0;
     right: 0;
     text-align: center;
     a {
       &:hover {
-        font-size: 2rem;
+        font-size: 1.6rem;
         transition: 200ms;
+        background-color: #efefef00;
       }
       transition: 200ms;
       margin-top: 1rem;
@@ -128,8 +130,10 @@ const NavContainer = styled.nav`
   }
 
   .burguer {
+    margin-right:1rem;
     @media (min-width: 768px) {
       display: none;
+      
     }
   }
 `;

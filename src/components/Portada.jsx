@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 function Portada() {
   return (
+    /* los SVG agregarlos en componentes para mayor claridad */
     <Cover>
       <div className="presentation">
         <div className="imgEMT">
@@ -19,14 +20,11 @@ function Portada() {
           >
             <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
           </svg>
-          <div className="direction">
-            
-          </div>
-          
+          <div className="direction"></div>
         </div>
-        <text>
-              Calle 124 # 7 - 35, Ofc 601 <hr /> <span>Bogotá</span>
-            </text>
+        <p>
+          Calle 124 # 7 - 35, Ofc 601 <hr /> <span>Bogotá</span>
+        </p>
         <div className="imgCALL">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -41,12 +39,11 @@ function Portada() {
               d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
             />
           </svg>
-          
         </div>
         <p>
-            <span>PBX:</span>(1) 743 1150 <br /> <span>Desde Celular:</span> 601
-            743 11 50
-          </p>
+          <span>PBX:</span>(1) 743 1150 <br /> <span>Desde Celular:</span> 601
+          743 11 50
+        </p>
         <div className="socialMedia">
           <a className="facebook" href="">
             <svg
@@ -110,6 +107,11 @@ const Cover = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+   
+    @media (max-width: 980px) {
+      display: none;
+    }
+  
   }
   a {
     color: #e8e8e8;
@@ -130,17 +132,17 @@ const Cover = styled.div`
     align-items: center;
     text-align: center;
     margin-left: 5rem;
-    color:#791953;
+    color: #791953;
   }
   .imgCALL {
     display: flex;
     align-items: center;
     text-align: center;
     margin-left: 5rem;
-    color:#411C4F;
+    color: #411c4f;
   }
   .facebook {
-    color: #1C1F4C;
+    color: #1c1f4c;
     &:hover {
       color: blue;
       transition: 200ms;
@@ -148,7 +150,7 @@ const Cover = styled.div`
   }
 
   .whastapp {
-    color: #1C1F4C;
+    color: #1c1f4c;
     &:hover {
       color: #00d757;
       transition: 200ms;
@@ -156,7 +158,7 @@ const Cover = styled.div`
   }
 
   .instagram {
-    color: #1C1F4C;
+    color: #1c1f4c;
     &:hover {
       color: #fe0970;
       transition: 200ms;
@@ -164,7 +166,7 @@ const Cover = styled.div`
   }
 
   .youtube {
-    color: #1C1F4C;
+    color: #1c1f4c;
     &:hover {
       color: #ff0033;
       transition: 200ms;
@@ -176,6 +178,8 @@ const Cover = styled.div`
     margin-top: 5px;
     margin-left: 5rem;
   }
+
+  
 
   span {
     font-weight: 700;
